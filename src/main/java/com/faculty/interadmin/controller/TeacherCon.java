@@ -7,4 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/teacher",method = RequestMethod.GET)
 public class TeacherCon {
+
 }
