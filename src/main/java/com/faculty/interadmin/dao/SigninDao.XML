@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.faculty.interadmin.dao.SigninDao">
+    <insert id="insertSignin" parameterType="signinEntity">
+        insert into signin(s_no,l_no,dt,sign_type) values(#{s_no},#{l_no},#{dt},#{sign_type})
+    </insert>
+    <select id="selectSigninAll" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno;
+    </select>
+    <select id="selectSigninBydateAll" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt between #{start} and #{end};
+    </select>
+    <select id="selectSigninBydateAlltype" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt between #{start} and #{end} and sign_type=#{type};
+    </select>
+    <select id="selectSigninBydateleft" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt>=#{start} ;
+    </select>
+    <select id="selectSigninBydatelefttype" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt>=#{start}  and sign_type=#{type} ;
+    </select>
+    <select id="selectSigninBydateright" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt <![CDATA[<=]]>#{end}  ;
+    </select>
+    <select id="selectSigninBydaterighttype" resultType="rt_sign">
+        select dt,name,type from signin,student where student.sno=signin.sno and dt<![CDATA[<=]]> #{end} and and sign_type=#{type} ;
+    </select>
+    <select id="selectUsersBytype" resultType="rt_sign">
+        select dt,name,sign_type from signin,student where student.sno=signin.sno and sign_type=#{type};
+    </select>
+    <update id="updatesignin" parameterType="signinEntity">
+        update signin set s_no=#{s_no},l_no=#{l_no},dt=#{dt},sign_type=#{sign_type} where sign_id=#{id}
+    </update>
+    <delete id="deletesigninById" >
+        delete from signin where sign_id=#{value}
+    </delete>
+</mapper>
