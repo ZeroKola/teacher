@@ -17,7 +17,7 @@ public class DocumentCon {
     //查询所有记录
     @RequestMapping("/findAll")
     public List<DocumentEntity> findAll(){
-        return  documentService.findAll();
+        return  documentService.findDAll();
     }
     //根据d_no查询一条记录
     @RequestMapping("/getDocumentEntityByD_no")

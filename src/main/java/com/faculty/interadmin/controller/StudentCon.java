@@ -2,6 +2,8 @@ package com.faculty.interadmin.controller;
 
 import java.util.List;
 
+import com.faculty.interadmin.entity.StudentEntity;
+import com.faculty.interadmin.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,8 +21,8 @@ public class StudentCon {
 
     @RequestMapping("/listStu")
     public String listStu (Model model) {
-        List<StudentEntity> StudentEntity = StudentService.findAll();
-        model.addAttribute("StudentEntitys", StudentEntitys);
+        List<StudentEntity> StudentEntity = StudentService.findSAll();
+        model.addAttribute( "StudentEntity",StudentEntity);
         return "listStu";
     }
 

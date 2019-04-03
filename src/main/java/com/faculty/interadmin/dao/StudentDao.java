@@ -17,19 +17,20 @@ import com.faculty.interadmin.entity.StudentEntity;
 @Mapper
 public interface StudentDao{
 
+
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM STUDENT")
-    List<StudentEntity> findAll();
+    List<StudentEntity> findSAll();
 
     @Insert("INSERT INTO STUDENTENTITY(ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSON},#{S_CLASS},#{S_IMG})")
-    void addStu(StudentEntity studentEntity);
+    void addStudent(StudentEntity studentEntity);
 
     @Update("UPDATE STUDENTENTITY SET S_NO=#{s_no}, S_DEPART=#{s_depart}, S_PROFESSON=#{s_professon},S_CLASS=#{s_class},S_IMG=#{s_img} WHERE ID=#{id}")
-    void updateStu(StudentEntity studentEntity);
+    void updateStudent(StudentEntity studentEntity);
 
     @Delete("DELETE FROM STUDENTENTITY WHERE ID=#{id}")
-    void deleteStu(String id);
+    void deleteStudent(String id);
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG FROM STUDENTENTITY WHERE ID=#{id}")
-    StudentEntity findById(@Param("id")String id);
+    StudentEntity findSById(@Param("id") String id);
 
 }

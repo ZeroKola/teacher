@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)//跨域访问
 @RequestMapping(value = "/signin")
-public class SigninCOn {
+public class SigninCon {
     @Autowired
     private SigninService signinService;
     @GetMapping()

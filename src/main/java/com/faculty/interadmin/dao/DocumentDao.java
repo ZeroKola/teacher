@@ -9,7 +9,7 @@ import java.util.List;
 public interface DocumentDao {
     //    获取所有数据
     @Select("select from document")
-    List<DocumentEntity> findAll();
+    List<DocumentEntity> findDAll();
     //    根据d_no查询一条记录
     @Select("select * from document where d_no=#{d_no}")
     DocumentEntity getDocumentEntityByD_no(String d_no);

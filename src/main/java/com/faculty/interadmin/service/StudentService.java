@@ -5,17 +5,20 @@ import org.springframework.stereotype.Service;
 
 import com.faculty.interadmin.entity.StudentEntity;
 
+import java.util.List;
+
+
 @Service
 @Mapper
 public interface StudentService {
-    List<StudentEntity> findAll();
+    List<StudentEntity> findSAll();
 
-    boolean addStudent(StudentEntity studentEntity);
+    void addStudent(StudentEntity studentEntity);
 
-    boolean updateStudent(StudentEntity studentEntity);
+    void updateStudent(StudentEntity studentEntity);
 
-    boolean deleteStudent(String id);
+    void deleteStudent(String id);
 
-    StudentEntity findById(String id);
+    StudentEntity findSById(String id);
 
 }

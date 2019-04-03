@@ -15,7 +15,7 @@ public class DocumentSerImpl implements DocumentService {
 
     @Override
     public List<DocumentEntity> findAll() {
-        return documentDao.findAll();
+        return documentDao.findDAll();
     }
 
     @Override

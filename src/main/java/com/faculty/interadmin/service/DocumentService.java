@@ -10,7 +10,7 @@ import java.util.List;
 @Mapper
 public interface DocumentService {
     //获取所有文件
-    List<DocumentEntity> findAll();
+    List<DocumentEntity> findDAll();
     //根据d_no查询一条记录
     DocumentEntity getDocumentEntityByD_no(String d_no);
     //根据d_no查询一条记录

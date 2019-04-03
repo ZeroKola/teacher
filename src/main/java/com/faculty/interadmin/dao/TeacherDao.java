@@ -15,7 +15,7 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
     @Select("select * from teacher")
-    List<TeacherEntity> findAll();
+    List<TeacherDao> findTAll();
 
     @Insert("insert into teacher(id,te_name,te_calendar,te_depart) values(#{id},#{te_name},#{te_calendar},#{te_depart})")
     void addTeacher (TeacherEntity teacherEntity);
@@ -27,6 +27,6 @@ public interface TeacherDao {
     void deleteTeacher(int id);
 
     @Select("select * from teacher where id=#{id},te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar}")
-    TeacherEntity findById(@Param("id")int id);
+    TeacherEntity findTById(@Param("id") int id);
 
 }

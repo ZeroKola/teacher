@@ -14,9 +14,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class TeacherSerImpl {
     @Resource
     private TeacherDao teacherDao;
+    private TeacherEntity teacher;
 
     public List<TeacherDao> findAll() {
-        return TeacherDao.findAll();
+        return TeacherDao.findTAll();
     }
 
     @Transactional
@@ -34,8 +35,8 @@ public class TeacherSerImpl {
         teacherDao.deleteTeacher(id);
     }
 
-    public TeacherDao findById(int id) {
-        return TeacherDao.findById(id);
+    public TeacherDao findTById(int id) {
+        return (TeacherDao) TeacherDao.findTById(id);
     }
 
 }
