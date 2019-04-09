@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Mapper
 public interface TeacherService {
-    List<TeacherEntity> findAll();
+    List<TeacherEntity> findTAll();
 
     void addTeacher(TeacherDao teacherDao);
 
@@ -18,5 +18,5 @@ public interface TeacherService {
 
     void deleteTeacher(int id);
 
-    void TeacherDao findById(int id);
+    TeacherDao findTById(int id);
 }

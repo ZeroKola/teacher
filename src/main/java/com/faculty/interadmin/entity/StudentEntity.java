@@ -11,11 +11,18 @@ public class StudentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private  String s_no;
+    private String name;
     private String s_depart;
     private  String s_profession;
     private String s_class;
     private String s_img;
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getId() {
         return id;
     }
