@@ -13,23 +13,36 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.faculty.interadmin.entity.StudentEntity;
 
+import javax.swing.*;
+
 
 @Mapper
 public interface StudentDao{
 
+
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM STUDENT")
-    List<StudentEntity> findAll();
+    static List<StudentEntity> findSAll() {
+        return null;
+    }
 
-    @Insert("INSERT INTO STUDENTENTITY(ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSON},#{S_CLASS},#{S_IMG})")
-    void addStu(StudentEntity studentEntity);
+    @Insert("INSERT INTO SENTENTIAL(ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSION},#{S_CLASS},#{S_IMG})")
+    static void addStudent(StudentEntity studentEntity) {
 
-    @Update("UPDATE STUDENTENTITY SET S_NO=#{s_no}, S_DEPART=#{s_depart}, S_PROFESSON=#{s_professon},S_CLASS=#{s_class},S_IMG=#{s_img} WHERE ID=#{id}")
-    void updateStu(StudentEntity studentEntity);
+    }
 
-    @Delete("DELETE FROM STUDENTENTITY WHERE ID=#{id}")
-    void deleteStu(String id);
+    @Update("UPDATE SENTENTIAL SET S_NO=#{s_no}, S_DEPART=#{s_depart}, S_PROFESSION=#{s_profession},S_CLASS=#{s_class},S_IMG=#{s_img} WHERE ID=#{id}")
+    static void updateStudent(StudentEntity studentEntity) {
 
-    @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG FROM STUDENTENTITY WHERE ID=#{id}")
-    StudentEntity findById(@Param("id")String id);
+    }
+
+    @Delete("DELETE FROM SENTENTIAL WHERE ID=#{id}")
+    static void deleteStudent(String id) {
+
+    }
+
+    @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM SENTENTIAL WHERE ID=#{id}")
+    static StudentEntity findSById(@Param("id") Spring id) {
+        return null;
+    }
 
 }

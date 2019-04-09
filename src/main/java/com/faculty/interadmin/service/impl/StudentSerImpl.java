@@ -1,20 +1,25 @@
 package com.faculty.interadmin.service.impl;
 
+import com.faculty.interadmin.entity.StudentEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import com.faculty.interadmin.entity.StudentEntity;
 import com.faculty.interadmin.dao.StudentDao;
 import com.faculty.interadmin.service.StudentService;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.swing.*;
+import java.util.List;
 
 @Service
 public class StudentSerImpl implements StudentService {
-    @Autowired
-    private StudentDao studentDao;
+    private com.faculty.interadmin.entity.StudentEntity StudentEntity;
 
-    @Override
-    public List<StudentEntity>findAll(){
-        return StudentDao.findAll();
+    @Autowired
+    public StudentSerImpl(StudentDao studentDao) {
+    }
+
+    public List<StudentEntity> findSAll() {
+        return  StudentDao.findSAll();
     }
 
     @Override
@@ -23,7 +28,7 @@ public class StudentSerImpl implements StudentService {
         StudentDao.addStudent(StudentEntity);
     }
 
-    @Override
+
     @Transactional
     public void updateStudent(StudentEntity studentEntity) {
         StudentDao.updateStudent(StudentEntity);
@@ -36,8 +41,17 @@ public class StudentSerImpl implements StudentService {
     }
 
     @Override
-    public StudentEnity findById(String id) {
-        return StudentDao.findById(id);
+    public com.faculty.interadmin.entity.StudentEntity findSById(String id) {
+        return null;
     }
+
+    @Override
+    public StudentDao findById(Spring id) {
+        return (StudentDao) StudentDao.findSById(id);
+    }
+
+
+
+
 
 }
