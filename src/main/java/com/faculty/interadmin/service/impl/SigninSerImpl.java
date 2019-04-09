@@ -1,7 +1,7 @@
 package com.faculty.interadmin.service.impl;
 
 import com.faculty.interadmin.dao.SigninDao;
-import com.faculty.interadmin.entity.Rt_sign;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import com.faculty.interadmin.service.SigninService;
 import org.springframework.beans.factory.annotation.Autowired;

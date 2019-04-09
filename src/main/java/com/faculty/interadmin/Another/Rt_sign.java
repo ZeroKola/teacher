@@ -1,4 +1,4 @@
-package com.faculty.interadmin.entity;
+package com.faculty.interadmin.Another;
 
 public class Rt_sign {
     private String date;

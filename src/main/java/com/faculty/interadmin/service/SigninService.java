@@ -1,6 +1,6 @@
 package com.faculty.interadmin.service;
 
-import com.faculty.interadmin.entity.Rt_sign;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Service;
