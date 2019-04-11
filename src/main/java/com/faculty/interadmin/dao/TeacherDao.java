@@ -19,6 +19,8 @@ public interface TeacherDao {
 
     static List<TeacherDao> findTAll();
 
+=======
+>>>>>>> dev-fengw
 
     @Insert("insert into teacher(id,te_name,te_calendar,te_depart) values(#{id},#{te_name},#{te_calendar},#{te_depart})")
     void addTeacher (TeacherEntity teacherEntity);
@@ -34,5 +36,7 @@ public interface TeacherDao {
 
     static TeacherEntity findTById(@Param("id") int id);
 
+=======
+>>>>>>> dev-fengw
 
 }
