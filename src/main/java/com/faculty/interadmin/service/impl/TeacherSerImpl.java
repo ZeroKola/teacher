@@ -20,6 +20,7 @@ public class TeacherSerImpl {
 <<<<<<< HEAD
         return TeacherDao.findTAll();
 =======
+        return (List<TeacherDao>) TeacherDao.findTAll();
 >>>>>>> dev-pjy
     }
 
@@ -42,6 +43,7 @@ public class TeacherSerImpl {
     public TeacherDao findTById(int id) {
         return (TeacherDao) TeacherDao.findTById(id);
 =======
+    public TeacherDao findTById(int id) { return (TeacherDao) TeacherDao.findTById(id);
 >>>>>>> dev-pjy
     }
 
