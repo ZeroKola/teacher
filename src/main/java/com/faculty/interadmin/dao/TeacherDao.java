@@ -20,6 +20,7 @@ public interface TeacherDao {
     static List<TeacherDao> findTAll();
 
 =======
+    List<TeacherDao> findTAll();
 >>>>>>> dev-fengw
 
     @Insert("insert into teacher(id,te_name,te_calendar,te_depart) values(#{id},#{te_name},#{te_calendar},#{te_depart})")
