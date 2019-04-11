@@ -41,7 +41,7 @@ public class StudentSerImpl implements StudentService {
 
 
     @Override
-    public StudentEnity findById(String id) {
+    public StudentEnity findSById(String id) {
         return StudentDao.findSById(id);
     }
 
