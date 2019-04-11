@@ -41,7 +41,10 @@ public class StudentSerImpl implements StudentService {
 
 
     @Override
+<<<<<<< HEAD
     public StudentEnity findSById(String id) {
+=======
+>>>>>>> dev-pjy
         return StudentDao.findSById(id);
     }
 
