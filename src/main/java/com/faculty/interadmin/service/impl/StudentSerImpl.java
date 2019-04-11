@@ -44,6 +44,7 @@ public class StudentSerImpl implements StudentService {
 <<<<<<< HEAD
     public StudentEnity findSById(String id) {
 =======
+    public StudentEnity findById(String id) {
 >>>>>>> dev-pjy
         return StudentDao.findSById(id);
     }
