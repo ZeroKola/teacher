@@ -21,7 +21,7 @@ public interface StudentDao{
 
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM STUDENT")
-<<<<<<< HEAD
+
     List<StudentEntity> findSAll();
 
     @Insert("INSERT INTO STUDENTENTITY(ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSON},#{S_CLASS},#{S_IMG})")
@@ -35,7 +35,6 @@ public interface StudentDao{
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG FROM STUDENTENTITY WHERE ID=#{id}")
     StudentEntity findSById(@Param("id") String id);
-=======
->>>>>>> dev-fengw
+
 
 }

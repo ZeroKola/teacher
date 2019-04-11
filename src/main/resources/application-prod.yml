@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: prod
+  datasource:
+    url: jdbc:mysql://localhost:3306/school?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123654
+server:
+  port: 8082
