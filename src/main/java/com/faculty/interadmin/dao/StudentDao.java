@@ -35,5 +35,7 @@ public interface StudentDao{
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG FROM STUDENTENTITY WHERE ID=#{id}")
     StudentEntity findSById(@Param("id") String id);
+=======
+>>>>>>> dev-fengw
 
 }
