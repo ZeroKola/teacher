@@ -23,6 +23,9 @@ public class TeacherSerImpl {
 =======
         return (List<TeacherDao>) TeacherDao.findTAll();
 >>>>>>> dev-pjy
+=======
+        return TeacherDao.findTAll();
+>>>>>>> dev-fengw
     }
 
     @Transactional
@@ -47,6 +50,10 @@ public class TeacherSerImpl {
 =======
     public TeacherDao findTById(int id) { return (TeacherDao) TeacherDao.findTById(id);
 >>>>>>> dev-pjy
+=======
+    public TeacherDao findTById(int id) {
+        return (TeacherDao) TeacherDao.findTById(id);
+>>>>>>> dev-fengw
     }
 
 }
