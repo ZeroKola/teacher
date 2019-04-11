@@ -7,11 +7,14 @@ import com.faculty.interadmin.dao.StudentDao;
 import com.faculty.interadmin.service.StudentService;
 import org.springframework.transaction.annotation.Transactional;
 
+<<<<<<< HEAD
+=======
 import java.util.List;
 
 @Service
 public class StudentSerImpl implements StudentService {
     @Autowired
+<<<<<<< HEAD
     private StudentDao studentDao;
     private Object StudentEntity;
 
@@ -27,6 +30,7 @@ public class StudentSerImpl implements StudentService {
     }
 
 
+<<<<<<< HEAD
     @Override
     @Transactional
     public void updateStudent(StudentEntity studentEntity) {
@@ -41,6 +45,7 @@ public class StudentSerImpl implements StudentService {
 
 
     @Override
+<<<<<<< HEAD
 <<<<<<< HEAD
     public StudentEnity findSById(String id) {
 =======

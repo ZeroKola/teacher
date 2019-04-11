@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 @Mapper
 public interface StudentService {
+<<<<<<< HEAD
     List<StudentEntity> findSAll();
 
     void addStudent(StudentEntity studentEntity);

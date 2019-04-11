@@ -20,6 +20,7 @@ public class StudentCon {
     private StudentService studentService;
 
     @RequestMapping("/listStu")
+<<<<<<< HEAD
     public String listStu (Model model) {
         List<StudentEntity> StudentEntity = StudentService.findSAll();
         model.addAttribute( "StudentEntity",StudentEntity);

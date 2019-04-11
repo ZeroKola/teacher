@@ -15,6 +15,7 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
     @Select("select * from teacher")
+<<<<<<< HEAD
 
     static List<TeacherDao> findTAll();
 
@@ -29,6 +30,7 @@ public interface TeacherDao {
     void deleteTeacher(int id);
 
     @Select("select * from teacher where id=#{id},te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar}")
+<<<<<<< HEAD
 
     static TeacherEntity findTById(@Param("id") int id);
 

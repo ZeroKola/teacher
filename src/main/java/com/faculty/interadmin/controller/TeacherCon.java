@@ -16,6 +16,7 @@ import com.faculty.interadmin.service.TeacherService;
 @RestController
 @RequestMapping(value = "/teacher",method = RequestMethod.GET)
 public class TeacherCon {
+<<<<<<< HEAD
     @Autowired
     private TeacherService teacherService;
 

@@ -13,12 +13,15 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.faculty.interadmin.entity.StudentEntity;
 
+import javax.swing.*;
+
 
 @Mapper
 public interface StudentDao{
 
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM STUDENT")
+<<<<<<< HEAD
     List<StudentEntity> findSAll();
 
     @Insert("INSERT INTO STUDENTENTITY(ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSON},#{S_CLASS},#{S_IMG})")
