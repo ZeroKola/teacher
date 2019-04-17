@@ -79,6 +79,5 @@ public class StudentEntity {
         this.s_feature = s_feature;
     }
 
-    private String s_feature;
 
 }

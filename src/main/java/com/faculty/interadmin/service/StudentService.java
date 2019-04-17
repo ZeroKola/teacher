@@ -43,8 +43,11 @@ public interface StudentService {
     }
 
     @Transactional
+<<<<<<< HEAD
 >>>>>>> dev-fengw
     void deleteStudent(String id);
+=======
+>>>>>>> dev-fengw
 
     StudentEntity findSById(String id);
 

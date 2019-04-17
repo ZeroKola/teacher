@@ -20,21 +20,30 @@ import javax.swing.*;
 public interface StudentDao{
 
 
+<<<<<<< HEAD
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG FROM STUDENT")
 
     List<StudentEntity> findSAll();
+=======
+>>>>>>> dev-fengw
 
     @Insert("INSERT INTO STUDENTENTITY(ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG)VALUES(#{ID}, #{S_NO}, #{S_DEPART},#{S_PROFESSON},#{S_CLASS},#{S_IMG})")
     void addStudent(StudentEntity studentEntity);
 
+<<<<<<< HEAD
     @Update("UPDATE STUDENTENTITY SET S_NO=#{s_no}, S_DEPART=#{s_depart}, S_PROFESSON=#{s_professon},S_CLASS=#{s_class},S_IMG=#{s_img} WHERE ID=#{id}")
     void updateStudent(StudentEntity studentEntity);
+    @Update("UPDATE SENTENTIAL SET ID=#{id}, S_DEPART=#{s_depart}, S_PROFESSION=#{s_profession},S_CLASS=#{s_class},S_IMG=#{s_img},S_FEATURE=#{s_feature} WHERE S_NO=#{s_no}")
+    static void updateStudent(StudentEntity studentEntity) {
 
     @Delete("DELETE FROM STUDENTENTITY WHERE ID=#{id}")
     void deleteStudent(String id);
 
+<<<<<<< HEAD
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSON,S_CLASS,S_IMG FROM STUDENTENTITY WHERE ID=#{id}")
     StudentEntity findSById(@Param("id") String id);
 
+=======
+>>>>>>> dev-fengw
 
 }

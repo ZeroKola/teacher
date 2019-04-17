@@ -28,4 +28,30 @@ public class StudentCon {
     }
 
 
+    @RequestMapping("/add")
+    public String addStudent(StudentEntity studentEntity) {
+        StudentService.studentService((com.faculty.interadmin.entity.StudentEntity) StudentEntity);
+        return "redirect:/listStu";
+    }
+
+    @RequestMapping("/toUpdate")
+    public String toUpdate(Model model, Spring s_no) {
+        StudentEntity studentEntity = (com.faculty.interadmin.entity.StudentEntity) studentService.findById(s_no);
+        model.addAttribute("StudentEntity", StudentEntity);
+        return "/updateStudent";
+    }
+
+    @RequestMapping("/update")
+    public String updateStudent(StudentEntity studentEntity) {
+        StudentService.updateStudent();
+        return "redirect:/listStu";
+    }
+
+    @RequestMapping("/delete")
+    public String deleteStudent(com.faculty.interadmin.entity.StudentEntity s_no) {
+        StudentService.studentService(s_no);
+        return "redirect:/listStu";
+
+
+    }
 }
