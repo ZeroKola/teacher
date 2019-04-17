@@ -44,8 +44,8 @@ public class StudentCon {
     }
 
     @RequestMapping("/toUpdate")
-    public String toUpdate(Model model, Spring id) {
-        StudentEntity studentEntity = (com.faculty.interadmin.entity.StudentEntity) studentService.findById(id);
+    public String toUpdate(Model model, Spring s_no) {
+        StudentEntity studentEntity = (com.faculty.interadmin.entity.StudentEntity) studentService.findById(s_no);
         model.addAttribute("StudentEntity", StudentEntity);
         return "/updateStudent";
     }
@@ -57,8 +57,8 @@ public class StudentCon {
     }
 
     @RequestMapping("/delete")
-    public String deleteStudent(com.faculty.interadmin.entity.StudentEntity id) {
-        StudentService.studentService(id);
+    public String deleteStudent(com.faculty.interadmin.entity.StudentEntity s_no) {
+        StudentService.studentService(s_no);
         return "redirect:/listStu";
 
 

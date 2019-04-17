@@ -16,6 +16,8 @@ public class StudentEntity {
     private  String s_profession;
     private String s_class;
     private String s_img;
+    private String s_feature;
+
     public String getName() {
         return name;
     }
@@ -79,6 +81,5 @@ public class StudentEntity {
         this.s_feature = s_feature;
     }
 
-    private String s_feature;
 
 }

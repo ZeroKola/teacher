@@ -32,9 +32,9 @@ public interface StudentService {
     }
 
     @Transactional
-    void deleteStudent(String id);
+    void deleteStudent(String s_no);
 
-    StudentEntity findSById(String id);
+    StudentEntity findSById(String s_no);
 
-    StudentDao findById(Spring id);
+    StudentDao findById(Spring s_no);
 }

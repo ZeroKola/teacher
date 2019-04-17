@@ -36,18 +36,18 @@ public class StudentSerImpl implements StudentService {
 
     @Override
     @Transactional
-    public void deleteStudent(String id) {
-        StudentDao.deleteStudent(id);
+    public void deleteStudent(String s_no) {
+        StudentDao.deleteStudent(s_no);
     }
 
     @Override
-    public com.faculty.interadmin.entity.StudentEntity findSById(String id) {
+    public com.faculty.interadmin.entity.StudentEntity findSById(String s_no) {
         return null;
     }
 
     @Override
-    public StudentDao findById(Spring id) {
-        return (StudentDao) StudentDao.findSById(id);
+    public StudentDao findById(Spring s_no) {
+        return (StudentDao) StudentDao.findSById(s_no);
     }
 
 
