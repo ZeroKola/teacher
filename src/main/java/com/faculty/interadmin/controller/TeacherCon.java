@@ -38,8 +38,8 @@ public class TeacherCon {
     }
 
     @RequestMapping("/toUpdate")
-    public String toUpdate(Model model, int id) {
-        TeacherEntity teacherEntity = (TeacherEntity) teacherService.findTById(id);
+    public String toUpdate(Model model, int te_id) {
+        TeacherEntity teacherEntity = (TeacherEntity) teacherService.findTByTe_id(te_id);
         model.addAttribute("TeacherEntity", teacherEntity);
         return "/updateTeacher";
     }
@@ -51,8 +51,8 @@ public class TeacherCon {
     }
 
     @RequestMapping("/delete")
-    public String deleteTeacher(int id) {
-        teacherService.deleteTeacher(id);
+    public String deleteTeacher(int te_id) {
+        teacherService.deleteTeacher(te_id);
         return "redirect:/listTeacher";
     }
 

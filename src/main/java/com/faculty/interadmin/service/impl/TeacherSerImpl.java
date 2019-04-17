@@ -16,7 +16,7 @@ public class TeacherSerImpl {
     private TeacherDao teacherDao;
     private TeacherEntity teacher;
 
-    public List<TeacherDao> findAll() {
+    public List<TeacherDao> findTAll() {
         return (List<TeacherDao>) TeacherDao.findTAll();
     }
 
@@ -31,11 +31,11 @@ public class TeacherSerImpl {
     }
 
     @Transactional
-    public void deleteTeacher(int id) {
-        teacherDao.deleteTeacher(id);
+    public void deleteTeacher(int te_id) {
+        teacherDao.deleteTeacher(te_id);
     }
 
-    public TeacherDao findTById(int id) { return (TeacherDao) TeacherDao.findTById(id);
+    public TeacherDao findTByTe_id(int te_id) { return (TeacherDao) TeacherDao.findTByTe_id(te_id);
     }
 
 }

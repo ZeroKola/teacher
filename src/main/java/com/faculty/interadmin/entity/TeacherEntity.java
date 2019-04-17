@@ -10,6 +10,7 @@ public class TeacherEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
+    private String te_id;
     private  String te_name;
     private String te_depart;
     private  String te_calendar;
@@ -46,5 +47,9 @@ public class TeacherEntity {
     public void setTe_calendar(String te_calendar) {
         this.te_calendar = te_calendar;
     }
+
+    public String getTe_id() { return te_id; }
+
+    public void setTe_id(String te_id) { this.te_id = te_id; }
 
 }

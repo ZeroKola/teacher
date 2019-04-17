@@ -15,18 +15,18 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
     @Select("select * from teacher")
-    static List<TeacherDao> findTAll();
+    List<TeacherDao> findTAll();
 
-    @Insert("insert into teacher(id,te_name,te_calendar,te_depart) values(#{id},#{te_name},#{te_calendar},#{te_depart})")
+    @Insert("insert into teacher(id,te_id,te_name,te_calendar,te_depart) values(#{id},#{te_id},#{te_name},#{te_calendar},#{te_depart})")
     void addTeacher (TeacherEntity teacherEntity);
 
-    @Update("update teacher set id=#{id}, te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar} where id=#{id}")
+    @Update("update teacher set id=#{id},te_id=#{te_id,}, te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar} where te_id=#{te_id}")
     void updateTeacher(TeacherEntity teacherEntity);
 
-    @Delete("delect from teacher where id=#{id}")
-    void deleteTeacher(int id);
+    @Delete("delect from teacher where te_id=#{te_id}")
+    void deleteTeacher(int te_id);
 
-    @Select("select * from teacher where id=#{id},te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar}")
-    static TeacherEntity findTById(@Param("id") int id);
+    @Select("select * from teacher where te_id=#{te_id,}")
+    TeacherEntity findTByTe_id(@Param("te_id") int te_id);
 
 }
