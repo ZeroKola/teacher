@@ -1,6 +1,5 @@
 package com.faculty.interadmin.controller;
 
-import com.faculty.interadmin.entity.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import com.faculty.interadmin.service.SigninService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,25 +14,15 @@ public class SigninCon {
     @Autowired
     private SigninService signinService;
     @GetMapping()
-    public List<Rt_sign> findAllsigninByTypeAndDate(String start,String end,String sign_type){
         if (start!=null &&end!=null &&sign_type!=null){//按照双时间+type查找
-            return this.signinService.selectSigninBydatetype(start, end, sign_type);
         }else if(start!=null &&end!=null &&sign_type==null){//按照双时间+查找
-            return this.signinService.selectSigninBydate(start, end);
         }else if(start==null &&end!=null &&sign_type==null){//右时间查找
-            return this.signinService.selectSigninBydateright( end);
         }else if(start!=null &&end==null &&sign_type==null){//按照左时间查找
-            return this.signinService.selectSigninBydateleft(start);
         }else if(start==null &&end==null &&sign_type==null){//查找全部
-            return this.signinService.findSigninAll();
         }else if(start==null &&end!=null &&sign_type!=null){//左时间+type
-            return this.signinService.selectSigninBydatelefttype(start,sign_type);
         }else if(start!=null &&end==null &&sign_type!=null){//按照右时间+type查找
-            return this.signinService.selectSigninBydaterighttype( end,sign_type);
         }else if(start==null &&end==null &&sign_type!=null){//type查找
-            return this.signinService.findSigninByType(sign_type);
         }else{
-            return null;
         }
     }
     @PutMapping()

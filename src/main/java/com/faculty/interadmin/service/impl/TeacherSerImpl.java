@@ -23,6 +23,7 @@ public class TeacherSerImpl {
         return TeacherDao.findTAll();
 =======
 =======
+    public List<TeacherDao> findTAll() {
 >>>>>>> dev-pjy
         return (List<TeacherDao>) TeacherDao.findTAll();
 >>>>>>> dev-pjy
@@ -42,6 +43,8 @@ public class TeacherSerImpl {
     }
 
     @Transactional
+    public void deleteTeacher(int te_id) {
+        teacherDao.deleteTeacher(te_id);
     }
 
 <<<<<<< HEAD
@@ -57,6 +60,7 @@ public class TeacherSerImpl {
         return (TeacherDao) TeacherDao.findTById(id);
 >>>>>>> dev-fengw
 =======
+    public TeacherDao findTByTe_id(int te_id) { return (TeacherDao) TeacherDao.findTByTe_id(te_id);
 >>>>>>> dev-pjy
     }
 
