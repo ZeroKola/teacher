@@ -1,6 +1,8 @@
 package com.faculty.interadmin.controller;
 
-import com.faculty.interadmin.entity.Rt_sign;
+import com.faculty.interadmin.Another.Msg;
+import com.faculty.interadmin.Another.ResultUtil;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import com.faculty.interadmin.service.SigninService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,25 +17,25 @@ public class SigninCon {
     @Autowired
     private SigninService signinService;
     @GetMapping()
-    public List<Rt_sign> findAllsigninByTypeAndDate(String start,String end,String sign_type){
+    public Msg<Rt_sign> findAllsigninByTypeAndDate(String start, String end, String sign_type){
         if (start!=null &&end!=null &&sign_type!=null){//按照双时间+type查找
-            return this.signinService.selectSigninBydatetype(start, end, sign_type);
+            return ResultUtil.success(this.signinService.selectSigninBydatetype(start, end, sign_type));
         }else if(start!=null &&end!=null &&sign_type==null){//按照双时间+查找
-            return this.signinService.selectSigninBydate(start, end);
+            return ResultUtil.success(this.signinService.selectSigninBydate(start, end));
         }else if(start==null &&end!=null &&sign_type==null){//右时间查找
-            return this.signinService.selectSigninBydateright( end);
+            return ResultUtil.success(this.signinService.selectSigninBydateright( end));
         }else if(start!=null &&end==null &&sign_type==null){//按照左时间查找
-            return this.signinService.selectSigninBydateleft(start);
+            return ResultUtil.success(this.signinService.selectSigninBydateleft(start));
         }else if(start==null &&end==null &&sign_type==null){//查找全部
-            return this.signinService.findSigninAll();
+            return ResultUtil.success(this.signinService.findSigninAll());
         }else if(start==null &&end!=null &&sign_type!=null){//左时间+type
-            return this.signinService.selectSigninBydatelefttype(start,sign_type);
+            return ResultUtil.success(this.signinService.selectSigninBydatelefttype(start,sign_type));
         }else if(start!=null &&end==null &&sign_type!=null){//按照右时间+type查找
-            return this.signinService.selectSigninBydaterighttype( end,sign_type);
+            return ResultUtil.success(this.signinService.selectSigninBydaterighttype( end,sign_type));
         }else if(start==null &&end==null &&sign_type!=null){//type查找
-            return this.signinService.findSigninByType(sign_type);
+            return ResultUtil.success(this.signinService.findSigninByType(sign_type));
         }else{
-            return null;
+            return ResultUtil.success(null);
         }
     }
     @PutMapping()
