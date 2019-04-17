@@ -15,6 +15,7 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
     @Select("select * from teacher")
+<<<<<<< HEAD
 
 
     static List<TeacherDao> findTAll();
@@ -24,18 +25,20 @@ public interface TeacherDao {
 
 
     @Insert("insert into teacher(id,te_name,te_calendar,te_depart) values(#{id},#{te_name},#{te_calendar},#{te_depart})")
+=======
+>>>>>>> dev-pjy
     void addTeacher (TeacherEntity teacherEntity);
 
-    @Update("update teacher set id=#{id}, te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar} where id=#{id}")
     void updateTeacher(TeacherEntity teacherEntity);
 
-    @Delete("delect from teacher where id=#{id}")
-    void deleteTeacher(int id);
 
+<<<<<<< HEAD
     @Select("select * from teacher where id=#{id},te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar}")
 
 
     static TeacherEntity findTById(@Param("id") int id);
+=======
+>>>>>>> dev-pjy
 
 
 

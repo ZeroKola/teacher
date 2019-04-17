@@ -28,6 +28,8 @@ public class StudentCon {
     }
 
 
+<<<<<<< HEAD
+=======
     @RequestMapping("/add")
     public String addStudent(StudentEntity studentEntity) {
         StudentService.studentService((com.faculty.interadmin.entity.StudentEntity) StudentEntity);
@@ -54,4 +56,5 @@ public class StudentCon {
 
 
     }
+>>>>>>> dev-fengw
 }

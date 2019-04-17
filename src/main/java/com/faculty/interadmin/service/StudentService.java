@@ -49,7 +49,5 @@ public interface StudentService {
 =======
 >>>>>>> dev-fengw
 
-    StudentEntity findSById(String id);
 
-    StudentDao findById(Spring id);
 }

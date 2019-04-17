@@ -50,8 +50,6 @@ public class StudentSerImpl implements StudentService {
 
     @Override
     @Transactional
-    public void deleteStudent(String id) {
-        StudentDao.deleteStudent(id);
     }
 
 
