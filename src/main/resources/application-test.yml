@@ -2,7 +2,7 @@ spring:
   profiles:
     active: test
   datasource:
-    url: jdbc:mysql://localhost:3306/school?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/teacSerPlat?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123654
 server:

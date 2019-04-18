@@ -50,12 +50,11 @@ public class StudentSerImpl implements StudentService {
 
     @Override
     @Transactional
-    public void deleteStudent(String id) {
-        StudentDao.deleteStudent(id);
     }
 
 
     @Override
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public StudentEnity findSById(String id) {
@@ -65,12 +64,17 @@ public class StudentSerImpl implements StudentService {
         return StudentDao.findSById(id);
 =======
     public com.faculty.interadmin.entity.StudentEntity findSById(String id) {
+=======
+>>>>>>> dev-fengw
         return null;
     }
 
     @Override
+<<<<<<< HEAD
     public StudentDao findById(Spring id) {
         return (StudentDao) StudentDao.findSById(id);
+>>>>>>> dev-fengw
+=======
 >>>>>>> dev-fengw
     }
 

@@ -1,6 +1,7 @@
 package com.faculty.interadmin.dao;
 
 import com.faculty.interadmin.entity.SigninEntity;
+import com.faculty.interadmin.Another.Rt_sign;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

@@ -16,7 +16,5 @@ public interface TeacherService {
 
     void updateTeacher(TeacherDao teacherDao);
 
-    void deleteTeacher(int id);
 
-    TeacherDao findTById(int id);
 }
