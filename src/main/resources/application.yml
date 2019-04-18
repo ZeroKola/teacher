@@ -12,14 +12,28 @@ spring:
         max-request-size: 100MB
         enabled: true
   datasource:
+<<<<<<< HEAD
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/teacserplat?useUnicode=true&characterEncoding=utf8
     username: root
     password:
+=======
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/teacserplat?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123
+>>>>>>> dev-baocz
 #tomcat
 server:
   tomcat:
     uri-encoding: UTF-8
+<<<<<<< HEAD
       max-threads: 1000
       min-spare-threads: 30
       port: 8080
+=======
+    port: 8080
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.faculty.interadmin.entity
+>>>>>>> dev-baocz

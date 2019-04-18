@@ -12,9 +12,9 @@ public class ResultUtil {
         return msg;
     }
 
-    public static Msg success() {
-        return success(null);
-    }
+  //  public static Msg success() {
+  //      return success(null);
+  //  }
 
     public static Msg error(Integer code, String resultmsg) {
         Msg msg = new Msg();
