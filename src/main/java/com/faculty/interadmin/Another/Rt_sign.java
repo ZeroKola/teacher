@@ -28,4 +28,5 @@ public class Rt_sign {
     public void setType(String type) {
         this.type = type;
     }
+
 }

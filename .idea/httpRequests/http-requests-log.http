@@ -1,0 +1,348 @@
+GET http://localhost:8080/signin?=&end=2020-04-24
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T082227.200.json
+
+###
+
+GET http://localhost:8080/signin?=&end=2020-04-24
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T081742.500.json
+
+###
+
+GET http://localhost:8080/signin?=&end=2020-04-24&start=2018-04-24
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T081727.200.json
+
+###
+
+GET http://localhost:8080/signin?=&end=2020
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T081230.500.json
+
+###
+
+GET http://localhost:8080/signin?=&end=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T081213.500.json
+
+###
+
+GET http://localhost:8080/signin?=&end=
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T080535.500.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2018&end=2020
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T080502.200.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2018&end=2020
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075819.500.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2018
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075757.200.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2020
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075745.200.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2019-04-18 10:56:29
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075727.200.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2019-04-18 10:56:29
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075427.500.json
+
+###
+
+GET http://localhost:8080/signin&?=&start=2019-04-18 10:56:29
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075421.404.json
+
+###
+
+GET http://localhost:8080/signin&start=2018?=&start=2019-04-18 10:56:29
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075404.404.json
+
+###
+
+GET http://localhost:8080/signin?=&start=2019-04-18 10:56:29
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075252.500.json
+
+###
+
+POST http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T075111.500.json
+
+###
+
+POST http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T074825.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T073811.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T073505.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T072951.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T072658.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T072058.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T071933.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T071931.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T071930.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T071928.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T071353.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T070847.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T070336.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T065701.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T065700.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T065656.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T064716.200.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T064542.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T064357.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T064151.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T063845.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T063633.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T063522.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T063039.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T060515.500.json
+
+###
+
+GET http://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET https://localhost:8080/signin
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET https://blog.csdn.net/fxbin123/article/details/80428216https://blog.csdn.net/fxbin123/article/details/80428216
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-18T053240.404.html
+
+###
+

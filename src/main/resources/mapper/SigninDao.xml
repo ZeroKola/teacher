@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.faculty.interadmin.dao.SigninDao">
+    <insert id="insertSignin" parameterType="signinEntity">
+        insert into signin(s_no,l_no,dt,sign_type) values(#{s_no},#{l_no},#{dt},#{sign_type})
+    </insert>
+    <select id="selectSigninAll" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no;
+    </select>
+    <select id="selectSigninBydateAll" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and dt between #{start} and #{end};
+    </select>
+    <select id="selectSigninBydateAlltype" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and dt between #{start} and #{end} and sign_type=#{sign_type};
+    </select>
+    <select id="selectSigninBydateleft" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and dt>=#{start} ;
+    </select>
+    <select id="selectSigninBydatelefttype" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and dt>=#{start}  and sign_type=#{sign_type} ;
+    </select>
+    <select id="selectSigninBydateright" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and #{end}>=dt ;
+    </select>
+    <select id="selectSigninBydaterighttype" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and  #{end}>=dt and and sign_type=#{sign_type} ;
+    </select>
+    <select id="selectUsersBytype" resultType="com.faculty.interadmin.entity.Rt_sign">
+        select dt,student.s_name,sign_type from signin,student where student.s_no=signin.s_no and sign_type=#{sign_type};
+    </select>
+    <update id="updatesignin" parameterType="signinEntity">
+        update signin set s_no=#{s_no},l_no=#{l_no},dt=#{dt},sign_type=#{sign_type} where sign_id=#{id}
+    </update>
+    <delete id="deletesigninById" >
+        delete from signin where sign_id=#{value}
+    </delete>
+</mapper>
