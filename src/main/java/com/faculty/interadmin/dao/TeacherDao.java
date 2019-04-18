@@ -47,7 +47,7 @@ public interface TeacherDao {
 
 
 
-    @Delete("delect from teacher where te_id=#{te_id}")
+    @Delete("delete from teacher where te_id=#{te_id}")
 
     void deleteTeacher(int te_id);
 

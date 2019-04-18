@@ -1,13 +1,19 @@
 package com.faculty.interadmin.Another;
 
+
+
 public class Rt_sign {
+
     private String date;
     private String name;
     private  String type;
 
+
+
     public String getDate() {
         return date;
     }
+
 
     public void setDate(String date) {
         this.date = date;
@@ -21,6 +27,7 @@ public class Rt_sign {
         this.name = name;
     }
 
+
     public String getType() {
         return type;
     }
@@ -28,5 +35,7 @@ public class Rt_sign {
     public void setType(String type) {
         this.type = type;
     }
+
+
 
 }
