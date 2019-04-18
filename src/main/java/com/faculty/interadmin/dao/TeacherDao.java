@@ -29,10 +29,10 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
 
-
     @Select("select * from teacher")
-    static List<TeacherDao> findTAll();
-
+    static List<TeacherDao> findTAll() {
+        return null;
+    }
 
 
     @Insert("insert into teacher(id,te_id,te_name,te_calendar,te_depart) values(#{id},#{te_id},#{te_name},#{te_calendar},#{te_depart})")
@@ -52,11 +52,10 @@ public interface TeacherDao {
     void deleteTeacher(int te_id);
 
 
-
     @Select("select * from teacher where te_id=#{te_id,}")
-
-    TeacherEntity findTByTe_id(@Param("te_id") int te_id);
-
+    static TeacherEntity findTByTe_id(@Param("te_id") int te_id) {
+        return null;
+    }
 
 
 }

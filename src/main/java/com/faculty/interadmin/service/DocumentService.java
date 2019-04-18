@@ -8,6 +8,8 @@ import java.util.List;
 
 @Mapper
 public interface DocumentService {
+    List<DocumentEntity> findAll();
+
     //获取所有文件
     List<DocumentEntity> findDAll();
     //根据d_no查询一条记录
