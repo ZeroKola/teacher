@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @Mapper
 public interface DocumentService {
     //获取所有文件
