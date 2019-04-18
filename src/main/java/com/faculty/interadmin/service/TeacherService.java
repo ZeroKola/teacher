@@ -20,8 +20,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-@Mapper
-
 public interface TeacherService {
 
     List<TeacherEntity> findTAll();

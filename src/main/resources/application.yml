@@ -1,39 +1,51 @@
 #mysql
+
 spring:
+
   profiles:
+
     active: #springActive#
+
   # jackson时间格式化
+
   jackson:
+
     time-zone: GMT+8
+
     date-format: yyyy-MM-dd HH:mm:ss
+
     http:
+
       multipart:
+
         max-file-size: 100MB
+
         max-request-size: 100MB
+
         enabled: true
+
   datasource:
-<<<<<<< HEAD
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/teacserplat?useUnicode=true&characterEncoding=utf8
-    username: root
-    password:
-=======
+
     driver-class-name: com.mysql.cj.jdbc.Driver
+
     url: jdbc:mysql://127.0.0.1:3306/teacserplat?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+
     username: root
-    password: 123
->>>>>>> dev-baocz
+
+    password:
+
 #tomcat
+
 server:
+
   tomcat:
+
     uri-encoding: UTF-8
-<<<<<<< HEAD
-      max-threads: 1000
-      min-spare-threads: 30
-      port: 8080
-=======
+
     port: 8080
+
 mybatis:
+
   mapperLocations: classpath:mapper/*.xml
+
   typeAliasesPackage: com.faculty.interadmin.entity
->>>>>>> dev-baocz

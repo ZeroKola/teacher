@@ -15,9 +15,9 @@ public class AccountCon {
 
     @Autowired
     private AccountService accountService;
-    @RequestMapping("/findAll")
-    public List<AccountEntity> findAll(){
-        return  accountService.findAll();
+    @RequestMapping("/findAccAll")
+    public List<AccountEntity> findAccAll(){
+        return  accountService.findAccAll();
     }
     @RequestMapping("/insertAccount")
     public void  insertAccount(AccountEntity accountEntity){

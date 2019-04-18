@@ -8,7 +8,7 @@ import java.util.List;
 @Mapper
 public interface AccountDao {
     @Select("select * from account")
-    List<AccountEntity> findAll();
+    List<AccountEntity> findAccAll();
 
     @Select("select * from account where account_id=#{account_id}")
     AccountDao getAccountByAccount_id(Integer id);

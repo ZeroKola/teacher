@@ -26,7 +26,6 @@ import java.util.List;
 
 @Service
 
-@Mapper
 
 public interface StudentService {
 
