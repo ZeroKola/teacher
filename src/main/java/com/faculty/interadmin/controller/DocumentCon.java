@@ -1,47 +1,77 @@
 package com.faculty.interadmin.controller;
 
+
+
+import com.faculty.interadmin.Another.Msg;
+
+import com.faculty.interadmin.Another.ResultUtil;
+
+import com.faculty.interadmin.Another.Rt_document;
+
 import com.faculty.interadmin.entity.DocumentEntity;
+
 import com.faculty.interadmin.service.DocumentService;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
+
+
+
+import javax.websocket.server.PathParam;
 
 import java.util.List;
 
+
+
 @RestController
-@RequestMapping(value = "/document",method = RequestMethod.GET)
+
+@CrossOrigin(origins = "*", maxAge = 3600)//跨域访问
+
+@RequestMapping(value = "/document")
+
 public class DocumentCon {
+
     @Autowired
+
     private DocumentService documentService;
-    //查询所有记录
-    @RequestMapping("/findAll")
-    public List<DocumentEntity> findAll(){
-        return  documentService.findAll();
+
+    //@GetMapping()
+
+//    public List<Rt_document> findAll() {
+
+//        System.out.println();
+
+//        return this.documentService.findDocumentinAll();
+
+//    }
+    @GetMapping()
+    public Msg<Rt_document> findAlldocumentinByTitleAndUploader(@PathParam("uploader") String uploader, @PathParam("title") String title) {
+
+       if (title == null && uploader == null) {//查找全部
+            return ResultUtil.success(this.documentService.findDocumentAll());
+        } else if (title != null) {//title查找
+            return ResultUtil.success(this.documentService.findDocumentByTitle(title));
+        }else if (uploader != null) {//uploader查找
+           return ResultUtil.success(this.documentService.findDocumentByUploader(uploader));}
+       else {
+            return ResultUtil.success(null);
+        }
     }
-    //根据d_no查询一条记录
-    @RequestMapping("/getDocumentEntityByD_no")
-    public DocumentEntity getDocumentEntityByD_no(String d_no){
-        return documentService.getDocumentEntityByD_no(d_no);
+    @PutMapping()
+    public void updateSignin(DocumentEntity documentEntity) {
+
+        this.documentService.updateDocument(documentEntity);
     }
-    //根据d_title查询一条记录
-    @RequestMapping("/getDocumentEntityByD_title")
-    public DocumentEntity getDocumentEntityByD_title(String d_title){
-        return documentService.getDocumentEntityByD_title(d_title);
+    @PostMapping()
+
+    public void insertSignin(@RequestBody DocumentEntity documentEntity) {
+
+        this.documentService.addDocument(documentEntity);
+
     }
-    //增加一条记录
-    @RequestMapping("/insertDocumentEntity")
-    public void insertDocumentEntity(DocumentEntity documentEntity) {
-        documentService.insertDocumentEntity(documentEntity);
-    }
-    //更新一条记录
-    @RequestMapping("/updateDocumentEntity")
-    public void updateDocumentEntity(DocumentEntity documentEntity) {
-        documentService.updateDocumentEntity(documentEntity);
-    }
-    //删除一条记录
-    @RequestMapping("/deleteDocumentEntity")
-    public void deleteDocumentEntity(String d_no) {
-        documentService.deleteDocumentEntityByD_no(d_no);
+    @DeleteMapping()
+    public void deleteById(String document_id) {
+        this.documentService.deleteDocumentinById(document_id);
     }
 }

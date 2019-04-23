@@ -1,45 +1,50 @@
 package com.faculty.interadmin.service.impl;
 
-import com.faculty.interadmin.entity.DocumentEntity;
+import com.faculty.interadmin.Another.Rt_document;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.dao.DocumentDao;
+import com.faculty.interadmin.entity.DocumentEntity;
 import com.faculty.interadmin.service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class DocumentSerImpl implements DocumentService {
     @Autowired
-    private  DocumentDao documentDao;
+    private DocumentDao documentDao;
 
     @Override
-    public List<DocumentEntity> findAll() {
-        return documentDao.findAll();
+    public void addDocument(DocumentEntity documentEntity) {
+        this.documentDao.insertDocument(documentEntity);
     }
 
     @Override
-    public DocumentEntity getDocumentEntityByD_no(String d_no) {
-        return documentDao.getDocumentEntityByD_no(d_no);
+    public List<Rt_document> findDocumentAll() {
+        System.out.println(this.documentDao.selectDocumentAll());
+        return  this.documentDao.selectDocumentAll();
     }
 
     @Override
-    public DocumentEntity getDocumentEntityByD_title(String d_title) {
-        return documentDao.getDocumentEntityBydepart_title(d_title);
+    public List<Rt_document> findDocumentByUploader(String uploader) {
+        return this.documentDao.selectDocumentByuploader(uploader);
     }
 
     @Override
-    public void insertDocumentEntity(DocumentEntity documentEntity) {
-        documentDao.insertDocumentEntity(documentEntity);
+    public List<Rt_document> findDocumentByTitle(String title) {
+        return this.documentDao.selectDocumentBytitle(title);
     }
 
     @Override
-    public void updateDocumentEntity(DocumentEntity documentEntity) {
-        documentDao.updateDocumentEntity(documentEntity);
+    public void updateDocument(DocumentEntity documentEntity) {
+        this.documentDao.updatedocument(documentEntity);
     }
 
     @Override
-    public void deleteDocumentEntityByD_no(String d_no) {
-        documentDao.deleteDocumentEntity(d_no);
+    public void deleteDocumentinById(String document_id) {
+        this.documentDao.deletedocumentById(document_id);
     }
 }
