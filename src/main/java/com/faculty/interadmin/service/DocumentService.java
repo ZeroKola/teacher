@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @Mapper
 public interface DocumentService {
+    List<DocumentEntity> findAll();
+
     //获取所有文件
     List<DocumentEntity> findDAll();
     //根据d_no查询一条记录

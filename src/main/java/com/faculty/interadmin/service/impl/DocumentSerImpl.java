@@ -19,6 +19,11 @@ public class DocumentSerImpl implements DocumentService {
     }
 
     @Override
+    public List<DocumentEntity> findDAll() {
+        return null;
+    }
+
+    @Override
     public DocumentEntity getDocumentEntityByD_no(String d_no) {
         return documentDao.getDocumentEntityByD_no(d_no);
     }

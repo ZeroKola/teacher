@@ -1,13 +1,12 @@
 package com.faculty.interadmin.service;
 
-import com.faculty.interadmin.entity.Rt_sign;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 @Mapper
 public interface SigninService {
     public void addSignin(SigninEntity signinEntity);
