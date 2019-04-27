@@ -1,43 +1,77 @@
 package com.faculty.interadmin.service.impl;
 
+
+
 import java.util.List;
 
 import com.faculty.interadmin.dao.TeacherDao;
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
 import com.faculty.interadmin.entity.TeacherEntity;
 import com.faculty.interadmin.service.TeacherService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import org.springframework.stereotype.Service;
+
+
 import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-public class TeacherSerImpl {
-    @Resource
-    private TeacherDao teacherDao;
-    private TeacherEntity teacher;
+@Transactional
+class TeacherSerlmpl implements TeacherService {
 
-    public List<TeacherDao> findAll() {
-        return TeacherDao.findTAll();
+    private com.faculty.interadmin.entity.TeacherEntity teacherEntity;
+
+
+    @Autowired
+
+    public TeacherDao teacherDao;
+
+
+    @Override
+    public void teacherService(com.faculty.interadmin.entity.TeacherEntity teacherEntity) {
+
     }
 
-    @Transactional
-    public void addTeacher(TeacherDao teacherDao) {
-        teacherDao.addTeacher(teacher);
+    public List<TeacherDao> findTAll() {
+
+        return this.teacherDao.findTAll();
+
     }
 
-    @Transactional
-    public void updateTeacher(TeacherDao teacherDao) {
-        teacherDao.updateTeacher(teacher);
+
+    @Override
+
+    public void addTeacher(TeacherEntity teacherEntity) {
+
+        this.teacherDao.addTeacher(teacherEntity);
+
     }
 
-    @Transactional
-    public void deleteTeacher(int id) {
-        teacherDao.deleteTeacher(id);
+
+    @Override
+    public void updateTeacher(TeacherEntity teacherEntity) {
+
+        this.teacherDao.updateTeacher(teacherEntity);
+
     }
 
-    public TeacherDao findTById(int id) {
-        return (TeacherDao) TeacherDao.findTById(id);
+
+    @Override
+
+    public void deleteTeacher(String te_id) {
+
+        this.teacherDao.deleteTeacher(te_id);
+
     }
 
+
+    @Override
+
+    public void findTByTe_id(String te_id) {
+
+        this.teacherDao.findTByTe_id(te_id);
+
+    }
 }
 

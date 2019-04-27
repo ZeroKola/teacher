@@ -1,40 +1,27 @@
 package com.faculty.interadmin.service;
-
-import com.faculty.interadmin.dao.StudentDao;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Service;
-
 import com.faculty.interadmin.entity.StudentEntity;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.swing.*;
 import java.util.List;
 
-
-@Service
 @Mapper
+
+
 public interface StudentService {
 
+     public void addStudent(StudentEntity studentEntity);
+     List<StudentEntity> findSAll();
+     List<StudentEntity>findSById(String s_no);
+     List<StudentEntity>findSByClass(String s_class);
+     List<StudentEntity>findSByDepart(String s_depart);
+     List<StudentEntity>findSByProfession(String s_profession);
 
-    static void studentService(StudentEntity studentEntity) {
-    }
+
+     void updateStudent(StudentEntity studentEntity);
+     void deleteStudent(String s_no);
 
 
-    static List<StudentEntity> findSAll() {
-        return null;
-    }
 
-    @Transactional
-    void addStudent(StudentEntity studentEntity);
 
-     static void updateStudent() {
-        updateStudent();
-    }
 
-    @Transactional
-    void deleteStudent(String s_no);
-
-    StudentEntity findSById(String s_no);
-
-    StudentDao findById(Spring s_no);
 }

@@ -1,7 +1,7 @@
 package com.faculty.interadmin.service.impl;
 
 import com.faculty.interadmin.dao.SigninDao;
-import com.faculty.interadmin.entity.Rt_sign;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.SigninEntity;
 import com.faculty.interadmin.service.SigninService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +23,7 @@ public class SigninSerImpl implements SigninService {
 
     @Override
     public List<Rt_sign> findSigninAll() {
+        System.out.println(this.signinDao.selectSigninAll());
         return  this.signinDao.selectSigninAll();
     }
 
@@ -33,7 +34,7 @@ public class SigninSerImpl implements SigninService {
 
     @Override
     public List<Rt_sign> selectSigninBydate(String start, String end) {
-        return this.signinDao.selectSigninBydate(start, end);
+        return this.signinDao.selectSigninBydateAll(start, end);
     }
 
     @Override
@@ -53,7 +54,7 @@ public class SigninSerImpl implements SigninService {
 
     @Override
     public List<Rt_sign> selectSigninBydateright(String end) {
-        return this.selectSigninBydateright(end);
+        return this.signinDao.selectSigninBydateright(end);
     }
 
     @Override

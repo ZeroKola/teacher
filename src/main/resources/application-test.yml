@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:mysql://localhost:3306/teacserplat?useUnicode=true&characterEncoding=utf8
+    username: root
+    password:
+server:
+  port: 8083
