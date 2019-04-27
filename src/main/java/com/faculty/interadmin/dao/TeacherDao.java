@@ -29,28 +29,15 @@ import com.faculty.interadmin.entity.TeacherEntity;
 public interface TeacherDao {
 
 
-    @Select("select * from teacher")
-    List<TeacherDao> findTAll();
-
-
-    @Insert("insert into teacher(id,te_id,te_name,te_calendar,te_depart) values(#{id},#{te_id},#{te_name},#{te_calendar},#{te_depart})")
+    List<TeacherEntity> findTAll();
+    List<TeacherEntity> findTByTe_id(String te_id);
+    List<TeacherEntity> findTByTe_depart(String te_depart);
 
     void addTeacher (TeacherEntity teacherEntity);
 
-
-
-    @Update("update teacher set id=#{id},te_id=#{te_id,}, te_name=#{te_name}, te_calendar=#{te_calendar},te_depart=#{te_calendar} where te_id=#{te_id}")
-
     void updateTeacher(TeacherEntity teacherEntity);
-
-
-
-    @Delete("delete from teacher where te_id=#{te_id}")
 
     void deleteTeacher(String te_id);
 
-
-    @Select("select * from teacher where te_id=#{te_id,}")
-    void findTByTe_id(@Param("te_id") String te_id) ;
 
 }

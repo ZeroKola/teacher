@@ -33,8 +33,8 @@ class TeacherSerlmpl implements TeacherService {
 
     }
 
-    public List<TeacherDao> findTAll() {
-
+    public List<TeacherEntity> findTAll() {
+        System.out.println(this.teacherDao.findTAll());
         return this.teacherDao.findTAll();
 
     }
@@ -68,9 +68,17 @@ class TeacherSerlmpl implements TeacherService {
 
     @Override
 
-    public void findTByTe_id(String te_id) {
+    public List<TeacherEntity> findTByTe_id(String te_id) {
 
-        this.teacherDao.findTByTe_id(te_id);
+        return this.teacherDao.findTByTe_id(te_id);
+
+    }
+
+    @Override
+
+    public List<TeacherEntity> findTByTe_depart(String te_depart) {
+
+        return this.teacherDao.findTByTe_depart(te_depart);
 
     }
 }

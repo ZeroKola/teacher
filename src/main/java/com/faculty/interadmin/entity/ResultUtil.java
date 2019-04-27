@@ -1,6 +1,8 @@
 package com.faculty.interadmin.entity;
 
 
+import com.faculty.interadmin.Another.Rt_sign;
+
 public class ResultUtil {
 
     /**
@@ -9,7 +11,7 @@ public class ResultUtil {
 
      */
 
-    public static Msg success(Object object) {
+    public static com.faculty.interadmin.Another.Msg<Rt_sign> success(Object object) {
         Msg msg = new Msg();
 
         msg.setCode(200);
