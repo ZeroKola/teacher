@@ -1,7 +1,10 @@
 package com.faculty.interadmin.service.impl;
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> dev-fengw
 import com.faculty.interadmin.entity.StudentEntity;
 
 import org.springframework.stereotype.Service;
@@ -13,40 +16,54 @@ import com.faculty.interadmin.dao.StudentDao;
 import com.faculty.interadmin.service.StudentService;
 
 import org.springframework.transaction.annotation.Transactional;
+<<<<<<< HEAD
 
 
 
 import javax.swing.*;
 
+=======
+>>>>>>> dev-fengw
 import java.util.List;
 
 
 
 @Service
+<<<<<<< HEAD
 
 public class StudentSerImpl implements StudentService {
 
     private com.faculty.interadmin.entity.StudentEntity StudentEntity;
+=======
+
+>>>>>>> dev-fengw
 
 
 
     @Autowired
 
+<<<<<<< HEAD
     public StudentSerImpl(StudentDao studentDao) {
 
     }
+=======
+>>>>>>> dev-fengw
 
 
 
     public List<StudentEntity> findSAll() {
+<<<<<<< HEAD
 
         return  StudentDao.findSAll();
+=======
+>>>>>>> dev-fengw
 
     }
 
 
 
     @Override
+<<<<<<< HEAD
 
     @Transactional
 
@@ -54,9 +71,12 @@ public class StudentSerImpl implements StudentService {
 
         StudentDao.addStudent(StudentEntity);
 
+=======
+>>>>>>> dev-fengw
     }
 
 
+<<<<<<< HEAD
 
 
 
@@ -66,11 +86,14 @@ public class StudentSerImpl implements StudentService {
 
         StudentDao.updateStudent(StudentEntity);
 
+=======
+>>>>>>> dev-fengw
     }
 
 
 
     @Override
+<<<<<<< HEAD
 
     @Transactional
 
@@ -78,25 +101,41 @@ public class StudentSerImpl implements StudentService {
 
         StudentDao.deleteStudent(s_no);
 
+=======
+>>>>>>> dev-fengw
     }
 
 
 
     @Override
 
+<<<<<<< HEAD
     public com.faculty.interadmin.entity.StudentEntity findSById(String s_no) {
 
         return null;
+=======
 
     }
+
+
+
 
 
 
     @Override
+>>>>>>> dev-fengw
 
+    }
+
+
+
+
+<<<<<<< HEAD
     public StudentDao findById(Spring s_no) {
 
         return (StudentDao) StudentDao.findSById(s_no);
+=======
+>>>>>>> dev-fengw
 
     }
 
@@ -110,4 +149,12 @@ public class StudentSerImpl implements StudentService {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> dev-fengw
 }

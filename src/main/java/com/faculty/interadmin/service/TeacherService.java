@@ -11,6 +11,7 @@ import com.faculty.interadmin.dao.TeacherDao;
 import com.faculty.interadmin.entity.TeacherEntity;
 
 import org.apache.ibatis.annotations.Mapper;
+<<<<<<< HEAD
 
 import org.springframework.stereotype.Service;
 
@@ -40,4 +41,6 @@ public interface TeacherService {
 
     TeacherDao findTByTe_id(int te_id);
 
+=======
+>>>>>>> dev-fengw
 }

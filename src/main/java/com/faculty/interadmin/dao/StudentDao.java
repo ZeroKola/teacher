@@ -1,4 +1,5 @@
 package com.faculty.interadmin.dao;
+<<<<<<< HEAD
 
 
 
@@ -30,15 +31,22 @@ import com.faculty.interadmin.entity.StudentEntity;
 
 import javax.swing.*;
 
+=======
+
+>>>>>>> dev-fengw
 
 
 
 
 @Mapper
+<<<<<<< HEAD
 
 public interface StudentDao{
+=======
+>>>>>>> dev-fengw
 
 
+<<<<<<< HEAD
 
 
 
@@ -92,4 +100,6 @@ public interface StudentDao{
 
 
 
+=======
+>>>>>>> dev-fengw
 }

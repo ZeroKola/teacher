@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.faculty.interadmin.dao.TeacherDao;
 
+<<<<<<< HEAD
 import com.faculty.interadmin.entity.TeacherEntity;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RestController;
+=======
+>>>>>>> dev-fengw
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -30,6 +33,10 @@ import com.faculty.interadmin.service.TeacherService;
 
 @RestController
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev-fengw
 @RequestMapping(value = "/teacher",method = RequestMethod.GET)
 
 public class TeacherCon {
@@ -38,6 +45,7 @@ public class TeacherCon {
 
     private TeacherService teacherService;
 
+<<<<<<< HEAD
 
 
     @RequestMapping("/listTeacher")
@@ -71,10 +79,13 @@ public class TeacherCon {
         teacherService.addTeacher((TeacherDao) teacherEntity);
 
         return "redirect:/listTeacher";
+=======
+>>>>>>> dev-fengw
 
     }
 
 
+<<<<<<< HEAD
 
     @RequestMapping("/toUpdate")
 
@@ -109,6 +120,8 @@ public class TeacherCon {
         teacherService.deleteTeacher(te_id);
 
         return "redirect:/listTeacher";
+=======
+>>>>>>> dev-fengw
 
     }
 
@@ -118,6 +131,9 @@ public class TeacherCon {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> dev-fengw
 }

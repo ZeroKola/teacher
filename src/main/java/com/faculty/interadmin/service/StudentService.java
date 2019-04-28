@@ -1,12 +1,16 @@
 package com.faculty.interadmin.service;
+<<<<<<< HEAD
 
 
 
 import com.faculty.interadmin.dao.StudentDao;
 
+=======
+>>>>>>> dev-fengw
 import org.apache.ibatis.annotations.Mapper;
 
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 
 
 
@@ -75,4 +79,6 @@ public interface StudentService {
 
     StudentDao findById(Spring s_no);
 
+=======
+>>>>>>> dev-fengw
 }

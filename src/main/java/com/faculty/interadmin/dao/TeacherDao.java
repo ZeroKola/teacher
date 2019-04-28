@@ -37,6 +37,11 @@ public interface TeacherDao {
 
     @Insert("insert into teacher(id,te_id,te_name,te_calendar,te_depart) values(#{id},#{te_id},#{te_name},#{te_calendar},#{te_depart})")
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dev-fengw
     void addTeacher (TeacherEntity teacherEntity);
 
 
@@ -49,6 +54,7 @@ public interface TeacherDao {
 
     @Delete("delete from teacher where te_id=#{te_id}")
 
+<<<<<<< HEAD
     void deleteTeacher(int te_id);
 
 
@@ -57,5 +63,7 @@ public interface TeacherDao {
         return null;
     }
 
+=======
+>>>>>>> dev-fengw
 
 }
