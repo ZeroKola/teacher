@@ -3,6 +3,8 @@ package com.faculty.interadmin.dao;
 
 
 
+
+
 import java.util.List;
 
 
@@ -13,7 +15,10 @@ import org.apache.ibatis.annotations.Insert;
 
 import org.apache.ibatis.annotations.Mapper;
 
+<<<<<<< HEAD
 import org.apache.ibatis.annotations.Param;
+=======
+>>>>>>> dev-pjy
 
 import org.apache.ibatis.annotations.Select;
 
@@ -40,6 +45,9 @@ import javax.swing.*;
 
 @Mapper
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dev-pjy
 
 public interface StudentDao{
 =======
@@ -92,6 +100,7 @@ public interface StudentDao{
 
     @Select("SELECT ID,S_NO,S_DEPART,S_PROFESSION,S_CLASS,S_IMG,S_FEATURE FROM student WHERE S_NO=#{s_no}")
 
+<<<<<<< HEAD
     static StudentEntity findSById(@Param("s_no") Spring s_no) {
 
         return null;
@@ -102,4 +111,25 @@ public interface StudentDao{
 
 =======
 >>>>>>> dev-fengw
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> dev-pjy
 }

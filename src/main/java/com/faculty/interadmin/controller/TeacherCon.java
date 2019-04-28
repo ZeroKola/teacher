@@ -5,6 +5,7 @@ package com.faculty.interadmin.controller;
 import java.util.List;
 
 
+<<<<<<< HEAD
 
 import com.faculty.interadmin.dao.TeacherDao;
 
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -29,19 +32,27 @@ import org.springframework.ui.Model;
 
 import com.faculty.interadmin.service.TeacherService;
 
+<<<<<<< HEAD
+=======
+>>>>>>> dev-pjy
 
 
 @RestController
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> dev-fengw
+=======
+
+>>>>>>> dev-pjy
 @RequestMapping(value = "/teacher",method = RequestMethod.GET)
 
 public class TeacherCon {
 
     @Autowired
+<<<<<<< HEAD
 
     private TeacherService teacherService;
 
@@ -81,10 +92,13 @@ public class TeacherCon {
         return "redirect:/listTeacher";
 =======
 >>>>>>> dev-fengw
+=======
 
     }
 
 
+>>>>>>> dev-pjy
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     @RequestMapping("/toUpdate")
@@ -122,8 +136,14 @@ public class TeacherCon {
         return "redirect:/listTeacher";
 =======
 >>>>>>> dev-fengw
+=======
 
+    @PostMapping()
+    public void findTByTe_id(TeacherEntity teacherEntity) {
+        this.teacherService.addTeacher(teacherEntity);
     }
+
+>>>>>>> dev-pjy
 
 
 
@@ -132,8 +152,11 @@ public class TeacherCon {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 }

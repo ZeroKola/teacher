@@ -21,12 +21,15 @@ public class DocumentSerImpl implements DocumentService {
     public List<DocumentEntity> findDAll() {
         return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> dev-wujy
     }
 
     @Override
 =======
+=======
+>>>>>>> dev-pjy
     }
 
     @Override

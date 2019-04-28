@@ -2,9 +2,12 @@ package com.faculty.interadmin.service.impl;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 import com.faculty.interadmin.entity.StudentEntity;
 
 import org.springframework.stereotype.Service;
@@ -22,13 +25,20 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.swing.*;
 
+<<<<<<< HEAD
 =======
 >>>>>>> dev-fengw
+=======
+
+
+
+>>>>>>> dev-pjy
 import java.util.List;
 
 
 
 @Service
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 public class StudentSerImpl implements StudentService {
@@ -37,10 +47,13 @@ public class StudentSerImpl implements StudentService {
 =======
 
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 
 
     @Autowired
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     public StudentSerImpl(StudentDao studentDao) {
@@ -57,12 +70,15 @@ public class StudentSerImpl implements StudentService {
         return  StudentDao.findSAll();
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
     }
 
 
 
     @Override
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     @Transactional
@@ -88,11 +104,14 @@ public class StudentSerImpl implements StudentService {
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
     }
 
 
 
     @Override
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     @Transactional
@@ -103,10 +122,13 @@ public class StudentSerImpl implements StudentService {
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
     }
 
 
 
+<<<<<<< HEAD
     @Override
 
 <<<<<<< HEAD
@@ -136,6 +158,8 @@ public class StudentSerImpl implements StudentService {
         return (StudentDao) StudentDao.findSById(s_no);
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
     }
 
@@ -150,6 +174,7 @@ public class StudentSerImpl implements StudentService {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -157,4 +182,9 @@ public class StudentSerImpl implements StudentService {
 
 
 >>>>>>> dev-fengw
+=======
+
+
+
+>>>>>>> dev-pjy
 }

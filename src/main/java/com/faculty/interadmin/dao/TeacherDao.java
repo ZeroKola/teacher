@@ -28,6 +28,7 @@ import com.faculty.interadmin.entity.TeacherEntity;
 
 public interface TeacherDao {
 
+<<<<<<< HEAD
 
     @Select("select * from teacher")
     static List<TeacherDao> findTAll() {
@@ -65,5 +66,7 @@ public interface TeacherDao {
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 }

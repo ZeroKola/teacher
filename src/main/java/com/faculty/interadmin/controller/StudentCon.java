@@ -6,14 +6,18 @@ import java.util.List;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 import com.faculty.interadmin.entity.StudentEntity;
 
 import com.faculty.interadmin.service.StudentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import org.springframework.ui.Model;
@@ -24,11 +28,18 @@ import org.springframework.ui.Model;
 
 
 >>>>>>> dev-fengw
+=======
+
+
+>>>>>>> dev-pjy
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RestController;
+
+
+
 
 
 
@@ -45,13 +56,17 @@ import javax.swing.*;
 
 @RestController
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 @RequestMapping(value = "/student",method = RequestMethod.GET)
 
 public class StudentCon {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private final StudentService studentService;
 
@@ -60,10 +75,13 @@ public class StudentCon {
 
 
 >>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 
 
     @Autowired
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     public StudentCon(StudentService studentService) {
@@ -119,10 +137,13 @@ public class StudentCon {
         model.addAttribute("StudentEntity", StudentEntity);
 
         return "/updateStudent";
+=======
+>>>>>>> dev-pjy
 
     }
 
 
+<<<<<<< HEAD
 
     @RequestMapping("/update")
 
@@ -149,6 +170,8 @@ public class StudentCon {
 
 
 
+=======
+>>>>>>> dev-pjy
 
     }
 

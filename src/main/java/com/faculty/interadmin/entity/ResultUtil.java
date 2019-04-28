@@ -1,6 +1,10 @@
 package com.faculty.interadmin.entity;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev-pjy
 public class ResultUtil {
 
     /**
@@ -9,7 +13,10 @@ public class ResultUtil {
 
      */
 
+<<<<<<< HEAD
     public static Msg success(Object object) {
+=======
+>>>>>>> dev-pjy
         Msg msg = new Msg();
 
         msg.setCode(200);
