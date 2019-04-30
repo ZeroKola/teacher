@@ -27,6 +27,7 @@ public class Rt_sign {
         this.name = name;
     }
 
+<<<<<<< HEAD
 
     public String getType() {
         return type;
@@ -35,6 +36,11 @@ public class Rt_sign {
     public void setType(String type) {
         this.type = type;
     }
+=======
+    public String getType() { return type; }
+
+    public void setType(String type) { this.type = type; }
+>>>>>>> dev-pjy
 
 
 

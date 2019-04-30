@@ -7,7 +7,6 @@ import java.util.List;
 
 import com.faculty.interadmin.Another.Msg;
 import com.faculty.interadmin.Another.ResultUtil;
-import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.StudentEntity;
 
 import com.faculty.interadmin.service.StudentService;
@@ -23,9 +22,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RestController;
 import javax.websocket.server.PathParam;
-
-
-
 
 
 @RestController
@@ -67,7 +63,7 @@ public class StudentCon {
         }
     }
 
-        @PutMapping()
+    @PutMapping()
     public void updateStudent(StudentEntity studentEntity) {
         this.studentService.updateStudent(studentEntity);
 

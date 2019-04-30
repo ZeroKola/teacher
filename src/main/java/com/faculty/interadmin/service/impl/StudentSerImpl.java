@@ -20,7 +20,7 @@ public class StudentSerImpl implements StudentService {
 
     public List<StudentEntity> findSAll() {
         System.out.println(this.studentDao.findSAll());
-        return  this.studentDao.findSAll();
+        return this.studentDao.findSAll();
 
     }
 
@@ -53,17 +53,12 @@ public class StudentSerImpl implements StudentService {
     }
 
 
-
-
-
-
     @Override
     public void updateStudent(StudentEntity studentEntity) {
 
         this.studentDao.updateStudent(studentEntity);
 
     }
-
 
 
     @Override
@@ -73,20 +68,4 @@ public class StudentSerImpl implements StudentService {
         this.studentDao.deleteStudent(s_no);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

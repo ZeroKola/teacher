@@ -28,13 +28,21 @@ import com.faculty.interadmin.entity.TeacherEntity;
 
 public interface TeacherDao {
 
+<<<<<<< HEAD
 
     @Select("select * from teacher")
-    List<TeacherDao> findTAll();
+    static List<TeacherDao> findTAll() {
+        return null;
+    }
 
 
     @Insert("insert into teacher(id,te_id,te_name,te_calendar,te_depart) values(#{id},#{te_id},#{te_name},#{te_calendar},#{te_depart})")
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dev-fengw
     void addTeacher (TeacherEntity teacherEntity);
 
 
@@ -47,10 +55,18 @@ public interface TeacherDao {
 
     @Delete("delete from teacher where te_id=#{te_id}")
 
-    void deleteTeacher(String te_id);
+<<<<<<< HEAD
+    void deleteTeacher(int te_id);
 
 
     @Select("select * from teacher where te_id=#{te_id,}")
-    void findTByTe_id(@Param("te_id") String te_id) ;
+    static TeacherEntity findTByTe_id(@Param("te_id") int te_id) {
+        return null;
+    }
+
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 }

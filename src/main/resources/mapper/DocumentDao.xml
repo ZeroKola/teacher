@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.faculty.interadmin.dao.DocumentDao">
+    <insert id="insertDocument" parameterType="documentEntity">
+        insert into document(d_no,d_title,d_uploader,d_url,d_intro) values(#{document_id},#{title},#{uploader},#{url},#{intro})
+    </insert>
+    <select id="selectDocumentAll" resultType="com.faculty.interadmin.entity.Rt_document">
+        select d_no,d_title,d_uploader,d_url,d_intro from document;
+    </select>
+    <select id="selectDocumentByTitle" resultType="com.faculty.interadmin.entity.Rt_document">
+        select * from document where d_title=#{d_title};
+    </select>
+    <select id="selectDocumentByUploader" resultType="com.faculty.interadmin.entity.Rt_document">
+        select * from document where d_uploader=#{d_uploader};
+    </select>
+    <update id="updatedocument" parameterType="documentEntity">
+        update document set d_no=#{document_id},d_uploader=#{uploader},d_url=#{url},d_title=#{title} where d_no=#{document_id}
+    </update>
+    <delete id="deletedocumentById" >
+        delete from document where d_no=#{document_id}
+    </delete>
+</mapper>

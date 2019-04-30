@@ -13,7 +13,7 @@ public interface StudentDao{
 
     void updateStudent(StudentEntity studentEntity);
 
-     void deleteStudent(String id);
+    void deleteStudent(String id);
 
     List<StudentEntity> findSById(String s_no);
     List<StudentEntity> findSByClass(String s_class);
