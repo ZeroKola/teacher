@@ -7,6 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface DocumentDao {
+<<<<<<< HEAD
     //    获取所有数据
     @Select("select from document")
     List<DocumentEntity> findDAll();
@@ -29,4 +30,6 @@ public interface DocumentDao {
     void deleteDocumentEntity(String d_no);
 
 
+=======
+>>>>>>> dev-wujy
 }

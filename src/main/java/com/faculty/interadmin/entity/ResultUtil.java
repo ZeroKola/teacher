@@ -1,8 +1,10 @@
 package com.faculty.interadmin.entity;
 
 
-import com.faculty.interadmin.Another.Rt_sign;
+<<<<<<< HEAD
+=======
 
+>>>>>>> dev-pjy
 public class ResultUtil {
 
     /**
@@ -11,7 +13,10 @@ public class ResultUtil {
 
      */
 
-    public static com.faculty.interadmin.Another.Msg<Rt_sign> success(Object object) {
+<<<<<<< HEAD
+    public static Msg success(Object object) {
+=======
+>>>>>>> dev-pjy
         Msg msg = new Msg();
 
         msg.setCode(200);

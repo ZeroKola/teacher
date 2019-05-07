@@ -1,6 +1,13 @@
 package com.faculty.interadmin.service.impl;
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 import com.faculty.interadmin.entity.StudentEntity;
 
 import org.springframework.stereotype.Service;
@@ -12,77 +19,147 @@ import com.faculty.interadmin.dao.StudentDao;
 import com.faculty.interadmin.service.StudentService;
 
 import org.springframework.transaction.annotation.Transactional;
+<<<<<<< HEAD
 
 
 
+import javax.swing.*;
 
+<<<<<<< HEAD
+=======
+>>>>>>> dev-fengw
+=======
+
+
+
+>>>>>>> dev-pjy
 import java.util.List;
 
 
 
 @Service
-@Transactional
+<<<<<<< HEAD
+<<<<<<< HEAD
+
 public class StudentSerImpl implements StudentService {
 
     private com.faculty.interadmin.entity.StudentEntity StudentEntity;
+=======
+
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
 
 
     @Autowired
+<<<<<<< HEAD
 
-    public StudentDao studentDao;
-
-
-    @Override
-    public void studentService(com.faculty.interadmin.entity.StudentEntity studentEntity) {
+<<<<<<< HEAD
+    public StudentSerImpl(StudentDao studentDao) {
 
     }
+=======
+>>>>>>> dev-fengw
+
+
 
     public List<StudentEntity> findSAll() {
+<<<<<<< HEAD
 
-        return  this.studentDao.findSAll();
+        return  StudentDao.findSAll();
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
     }
 
 
 
     @Override
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    @Transactional
 
     public void addStudent(StudentEntity studentEntity) {
 
-        this.studentDao.addStudent(StudentEntity);
+        StudentDao.addStudent(StudentEntity);
 
+=======
+>>>>>>> dev-fengw
     }
 
 
+<<<<<<< HEAD
 
 
 
+    @Transactional
 
-    @Override
     public void updateStudent(StudentEntity studentEntity) {
 
-        this.studentDao.updateStudent(StudentEntity);
+        StudentDao.updateStudent(StudentEntity);
 
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
     }
 
 
 
     @Override
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    @Transactional
 
     public void deleteStudent(String s_no) {
 
-        this.studentDao.deleteStudent(s_no);
+        StudentDao.deleteStudent(s_no);
+
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
+    }
+
+
+
+<<<<<<< HEAD
+    @Override
+
+<<<<<<< HEAD
+    public com.faculty.interadmin.entity.StudentEntity findSById(String s_no) {
+
+        return null;
+=======
 
     }
+
+
+
 
 
 
     @Override
+>>>>>>> dev-fengw
 
-    public void findSById(String s_no) {
+    }
 
-        this.studentDao.findSById(s_no);
+
+
+
+<<<<<<< HEAD
+    public StudentDao findById(Spring s_no) {
+
+        return (StudentDao) StudentDao.findSById(s_no);
+=======
+>>>>>>> dev-fengw
+=======
+>>>>>>> dev-pjy
 
     }
 
@@ -96,7 +173,18 @@ public class StudentSerImpl implements StudentService {
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 
+
+
+>>>>>>> dev-fengw
+=======
+
+
+
+>>>>>>> dev-pjy
 }
