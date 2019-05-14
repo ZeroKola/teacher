@@ -2,11 +2,9 @@ package com.faculty.interadmin.controller;
 
 
 
-import java.util.List;
-
-
 import com.faculty.interadmin.Another.Msg;
 import com.faculty.interadmin.Another.ResultUtil;
+import com.faculty.interadmin.Another.Rt_sign;
 import com.faculty.interadmin.entity.StudentEntity;
 
 import com.faculty.interadmin.service.StudentService;
@@ -30,31 +28,30 @@ import javax.websocket.server.PathParam;
 
 public class StudentCon {
 
-    private com.faculty.interadmin.entity.StudentEntity studentEntity;
-
-
+    private final StudentService studentService;
 
     @Autowired
+    public StudentCon(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
-    public StudentService studentService;
-
-    @GetMapping()
-    public Msg<StudentEntity> findAllSBy(@PathParam("s_no") String s_no, @PathParam("s_depart") String s_depart, @PathParam("s_profession") String s_profession,
-                                         @PathParam("s_class") String s_class)
+    @GetMapping(value = "/find")
+    public Msg<Rt_sign> findAllSBy(@PathParam("s_no") String s_no, @PathParam("depart") String depart, @PathParam("s_profession") String profession,
+                                   @PathParam("classroom") String classroom)
     {
-        if(s_class==null && s_depart==null && s_profession==null && s_no!=null){
+        if(classroom==null && depart==null && profession==null && s_no!=null){
             return ResultUtil.success(this.studentService.findSById(s_no));
         }
-        else if (s_class !=null && s_depart!=null && s_profession!=null && s_no==null){
-            return ResultUtil.success(this.studentService.findSByClass(s_class));
+        else if (classroom !=null && depart!=null && profession!=null && s_no==null){
+            return ResultUtil.success(this.studentService.findSByClass(classroom,depart,profession));
         }
-        else if (s_class ==null && s_depart!=null && s_profession==null && s_no==null){
-            return ResultUtil.success(this.studentService.findSByDepart(s_depart));
+        else if (classroom ==null && depart!=null && profession==null && s_no==null){
+            return ResultUtil.success(this.studentService.findSByDepart(depart));
         }
-        else if (s_class ==null && s_depart!=null && s_profession!=null && s_no==null){
-            return ResultUtil.success(this.studentService.findSByProfession(s_profession));
+        else if (classroom ==null && depart!=null && profession!=null && s_no==null){
+            return ResultUtil.success(this.studentService.findSByProfession(depart,profession));
         }
-        else if(s_class !=null && s_depart!=null && s_profession!=null && s_no !=null){
+        else if(classroom != null && depart != null && profession != null && s_no!=null){
             return ResultUtil.success(this.studentService.findSAll());
         }
         else
@@ -63,22 +60,23 @@ public class StudentCon {
         }
     }
 
-    @PutMapping()
+    @PutMapping(value = "/update")
     public void updateStudent(StudentEntity studentEntity) {
         this.studentService.updateStudent(studentEntity);
 
     }
 
-    @PostMapping()
+    @PostMapping(value = "/add")
     public void addStudent(@RequestBody StudentEntity studentEntity) {
         this.studentService.addStudent(studentEntity);
 
     }
 
-    @DeleteMapping()
+    @DeleteMapping("/delete")
     public void deleteStudent(String s_no) {
         this.studentService.deleteStudent(s_no);
 
     }
+
 
 }

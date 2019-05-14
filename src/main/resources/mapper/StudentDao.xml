@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.faculty.interadmin.dao.StudentDao">
+    <insert id="addStudent" parameterType="StudentEntity">
+        insert into student(id, s_no, s_name, s_depart, s_profession, s_class, s_img,s_feature) values(#{id},#{s_no},#{s_name},#{s_depart},#{s_profession},#{s_class},#{s_img},#{s_feature})
+    </insert>
+    <select id="findSAll" resultType="com.faculty.interadmin.entity.Rt_Student" resultMap="">
+        select id, s_no, s_name, s_depart, s_profession, s_class, s_img, s_feature from student;
+    </select>
+    <select id="findSById" resultType="com.faculty.interadmin.entity.Rt_Student">
+        select * from student where s_no=#{s_no} ;
+    </select>
+    <select id="findSByClass" resultType="com.faculty.interadmin.entity.Rt_Student">
+        select * from student where s_class=#{s_class};
+    </select>
+    <select id="findSByDepart" resultType="com.faculty.interadmin.entity.Rt_Student">
+        select * from student where s_depart=#{s_depart};
+    </select>
+    <select id="findSByProfession" resultType="com.faculty.interadmin.entity.Rt_Student">
+        select * from student where s_profession=#{s_profession};
+    </select>
+    <update id="updateStudent" parameterType="StudentEntity">
+        update student set id=#{id},s_no=#{s_no},s_name=#{s_name},s_depart=#{s_depart},s_profession=#{s_profession},s_class=#{s_class},s_img=#{s_img},s_feature=#{s_feature} where s_no=#{s_no}
+    </update>
+    <delete id="deleteStudent" >
+        delete from student where s_no=#{s_no}
+    </delete>
+</mapper>
