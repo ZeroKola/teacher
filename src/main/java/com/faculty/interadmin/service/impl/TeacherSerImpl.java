@@ -5,35 +5,24 @@ package com.faculty.interadmin.service.impl;
 import java.util.List;
 
 import com.faculty.interadmin.dao.TeacherDao;
+import com.faculty.interadmin.Another.Rt_teacher;
 import com.faculty.interadmin.entity.TeacherEntity;
 import com.faculty.interadmin.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
-
-
 import org.springframework.stereotype.Service;
-
-
 import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
 @Transactional
-class TeacherSerlmpl implements TeacherService {
-
-    private com.faculty.interadmin.entity.TeacherEntity teacherEntity;
-
+public class TeacherSerImpl implements TeacherService {
 
     @Autowired
 
     public TeacherDao teacherDao;
 
 
-    @Override
-    public void teacherService(com.faculty.interadmin.entity.TeacherEntity teacherEntity) {
-
-    }
-
-    public List<TeacherEntity> findTAll() {
+    public List<Rt_teacher> findTAll() {
         System.out.println(this.teacherDao.findTAll());
         return this.teacherDao.findTAll();
 
@@ -44,7 +33,7 @@ class TeacherSerlmpl implements TeacherService {
 
     public void addTeacher(TeacherEntity teacherEntity) {
 
-        this.teacherDao.addTeacher(teacherEntity);
+        this.teacherDao.insertTeacher(teacherEntity);
 
     }
 
@@ -68,7 +57,7 @@ class TeacherSerlmpl implements TeacherService {
 
     @Override
 
-    public List<TeacherEntity> findTByTe_id(String te_id) {
+    public List<Rt_teacher> findTByTe_id(String te_id) {
 
         return this.teacherDao.findTByTe_id(te_id);
 
@@ -76,7 +65,7 @@ class TeacherSerlmpl implements TeacherService {
 
     @Override
 
-    public List<TeacherEntity> findTByTe_depart(String te_depart) {
+    public List<Rt_teacher> findTByTe_depart(String te_depart) {
 
         return this.teacherDao.findTByTe_depart(te_depart);
 
