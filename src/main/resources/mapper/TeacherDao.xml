@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.faculty.interadmin.dao.TeacherDao">
-    <insert id="insertTeacher" parameterType="teacherEntity">
+    <insert id="insertTeacher" parameterType="TeacherEntity">
       insert into teacher(id,te_depart,te_id,te_name,te_calendar) values (#{id},#{te_depart},#{te_id},#{te_name},#{te_calendar})
     </insert>
     <select id="findTAll" resultType="com.faculty.interadmin.entity.Rt_teacher">
@@ -14,7 +14,7 @@
     <select id="findTByte_depart" resultType="com.faculty.interadmin.entity.Rt_teacher">
         select id,te_depart,te_id,te_name,te_calendar from teacher where te_depart=#{te_depart};
     </select>
-    <update id="updateTeacher" parameterType="teacherEntity">
+    <update id="updateTeacher" parameterType="TeacherEntity">
         update teacher set id=#{id},te_depart=#{te_depart},te_id=#{te_id},te_name=#{te_name},te_calendar=#{te_calendar}
     </update>
     <delete id="deleteTeacher">

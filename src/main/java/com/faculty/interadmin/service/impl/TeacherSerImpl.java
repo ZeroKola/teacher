@@ -10,16 +10,13 @@ import com.faculty.interadmin.entity.TeacherEntity;
 import com.faculty.interadmin.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
-@Transactional
 public class TeacherSerImpl implements TeacherService {
 
     @Autowired
-
-    public TeacherDao teacherDao;
+    private TeacherDao teacherDao;
 
 
     public List<Rt_teacher> findTAll() {
@@ -57,17 +54,17 @@ public class TeacherSerImpl implements TeacherService {
 
     @Override
 
-    public List<Rt_teacher> findTByTe_id(String te_id) {
+    public List<Rt_teacher> findTByTe_id(String T_id) {
 
-        return this.teacherDao.findTByTe_id(te_id);
+        return this.teacherDao.findTByTe_id(T_id);
 
     }
 
     @Override
 
-    public List<Rt_teacher> findTByTe_depart(String te_depart) {
+    public List<Rt_teacher> findTByTe_depart(String depart) {
 
-        return this.teacherDao.findTByTe_depart(te_depart);
+        return this.teacherDao.findTByTe_depart(depart);
 
     }
 }
