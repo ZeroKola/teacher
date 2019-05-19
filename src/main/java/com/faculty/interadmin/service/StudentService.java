@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface StudentService {
 
-    public void addStudent(StudentEntity studentEntity);
+    void addStudent(StudentEntity studentEntity);
 
     List<Rt_Student> findSAll();
 

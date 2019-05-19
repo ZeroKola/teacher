@@ -34,9 +34,9 @@ public class StudentCon {
     public StudentCon(StudentService studentService) {
         this.studentService = studentService;
     }
-
-    @GetMapping(value = "/find")
-    public Msg<Rt_sign> findAllSBy(@PathParam("s_no") String s_no, @PathParam("depart") String depart, @PathParam("s_profession") String profession,
+    @SuppressWarnings("unchecked")
+    @GetMapping("/find")
+    public Msg<Rt_sign> findAllSBy(@PathParam("s_no") String s_no, @PathParam("depart") String depart, @PathParam("profession") String profession,
                                    @PathParam("classroom") String classroom)
     {
         if(classroom==null && depart==null && profession==null && s_no!=null){
@@ -51,7 +51,7 @@ public class StudentCon {
         else if (classroom ==null && depart!=null && profession!=null && s_no==null){
             return ResultUtil.success(this.studentService.findSByProfession(depart,profession));
         }
-        else if(classroom != null && depart != null && profession != null && s_no!=null){
+        else if(classroom == null && depart == null && profession == null && s_no==null){
             return ResultUtil.success(this.studentService.findSAll());
         }
         else

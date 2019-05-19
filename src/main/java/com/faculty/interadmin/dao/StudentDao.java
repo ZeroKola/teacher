@@ -2,12 +2,10 @@ package com.faculty.interadmin.dao;
 import java.util.List;
 
 import com.faculty.interadmin.Another.Rt_Student;
-import org.apache.ibatis.annotations.*;
 import com.faculty.interadmin.entity.StudentEntity;
+import org.springframework.stereotype.Repository;
 
-
-@Mapper
-
+@Repository
 public interface StudentDao{
     List<Rt_Student> findSAll();
 

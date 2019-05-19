@@ -15,9 +15,12 @@ import java.util.List;
 public class StudentSerImpl implements StudentService {
 
 
-    @Autowired
+    private final StudentDao studentDao;
 
-    public StudentDao studentDao;
+    @Autowired
+    public StudentSerImpl(StudentDao studentDao) {
+        this.studentDao = studentDao;
+    }
 
     public List<Rt_Student> findSAll() {
         System.out.println(this.studentDao.findSAll());

@@ -4,7 +4,7 @@
     <insert id="addStudent" parameterType="StudentEntity">
         insert into student(id, s_no, s_name, s_depart, s_profession, s_class, s_img,s_feature) values(#{id},#{s_no},#{s_name},#{s_depart},#{s_profession},#{s_class},#{s_img},#{s_feature})
     </insert>
-    <select id="findSAll" resultType="com.faculty.interadmin.entity.Rt_Student" resultMap="">
+    <select id="findSAll" resultType="com.faculty.interadmin.entity.Rt_Student">
         select id, s_no, s_name, s_depart, s_profession, s_class, s_img, s_feature from student;
     </select>
     <select id="findSById" resultType="com.faculty.interadmin.entity.Rt_Student">
